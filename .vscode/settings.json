@@ -1,0 +1,9 @@
+{
+  "ruby.lint": {
+
+  },
+  "ruby.locate": {
+    "exclude": "{**/@(test|spec|tmp|.*),**/@(test|spec|tmp|.*)/**,**/*_spec.rb}",
+    "include": "**/*.rb"
+  }
+}
