@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* the project is part the odin project curriculum using ruby on rails
+* the project is a simple members only ?
+* you should be able to sign up and log in  Using "devise"
+* you should be able to create a post and see all posts with author name if you are logged in
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
