@@ -1,35 +1,12 @@
-<nav class="navbar navbar-light  navbar-expand-lg bg-body-tertiary" style="background-color: #e3f2fd;">
-  <div class="container-fluid">
-     <%=link_to "Members Only" ,root_path ,:class=>"navbar-brand" %>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <%=link_to "Posts" ,root_path ,:class=>"nav-link active" %>
-        </li>
-      </ul>
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
-    <% if user_signed_in?  %>
-          <li class="nav-item navbar-brand">
-          <span class="navbar-brand mb-0 h1"><%=current_user.email%></span>
+<p style="color: green"><%= notice %></p>
 
-          </li>
-          <li class="nav-item">
-            <%=button_to "Sign Out",destroy_user_session_path,method: :delete ,:class=>"btn btn-danger"%>
-          </li>
-        <%else %>
-          <li class="nav-item">
-            <%=link_to "Sign In" ,new_user_session_path  ,:class=>"nav-link"%>
-          </li>
+<% Post.all.each do |post| %>
+  <%= render post %>
+<% end %>
+<div>
+  <% if user_signed_in? %>
+    <%= link_to "New Post", new_post_path %>
+  <%end%>
+  <%= link_to "Back to Posts", root_path %>
+</div>
 
-          <li class="nav-item">
-            <%=link_to "Sign Up" ,new_user_registration_path ,:class=>"nav-link" %>
-          </li>
-
-        <%end%>
-      </ul>
-    </div>
-  </div>
-</nav>

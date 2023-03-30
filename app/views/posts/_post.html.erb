@@ -1,0 +1,17 @@
+<div class="article" id="<%= dom_id post %>">
+  <p class="head">
+    <%= post.title %>
+  </p>
+
+  <div class="content">
+    <%= post.body  %>
+  </div>
+
+<% if user_signed_in? %>
+  <div  class="content">
+    <i class="fa-solid fa-user"></i>
+    <p><%=post.user.email%></p>
+  </div>
+<%end%>
+
+</div>
